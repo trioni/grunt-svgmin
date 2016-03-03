@@ -20,6 +20,7 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 grunt.initConfig({
 	svgmin: {
 		options: {
+			verbose: false, // Only output a summary instead of lines for each files + summary
 			plugins: [
 				{
 					removeViewBox: false
