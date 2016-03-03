@@ -39,7 +39,8 @@ module.exports = function (grunt) {
 				next();
 			});
 		}, function () {
-			grunt.log.writeln('Total saved: ' + chalk.green(prettyBytes(totalSaved)) + ', for ' + chalk.green(totalFiles) + ' files');
+			var fileText = (totalFiles === 1) ? 'file' : 'files';
+			grunt.log.writeln('Total saved: ' + chalk.green(prettyBytes(totalSaved)) + ', for ' + chalk.green(totalFiles) + ' ' + fileText);
 			done();
 		});
 	});
